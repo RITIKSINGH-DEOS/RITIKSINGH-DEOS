@@ -56,8 +56,5 @@
 </a>
 
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ritiksingh-deos&show_icons=true&locale=en&layout=compact" alt="ritiksingh-deos" /></p>
+![Ritik Singh's Graph](https://github-readme-activity-graph.vercel.app/graph?username=ritiksingh-deos&custom_title=Ritik%20Singh's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=7F3FBF&line=7F3FBF&point=7F3FBF&area_color=FFFFFF&title_color=FFFFFF&area=true)
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ritiksingh-deos&show_icons=true&locale=en" alt="ritiksingh-deos" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ritiksingh-deos&" alt="ritiksingh-deos" /></p>
