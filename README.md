@@ -2,15 +2,13 @@
 
 <h1 align="center">Hi 👋, I'm RITIK SINGH</h1>
 
-<h3 align="center">❤️A Passionate Frontend Developer from India❤️<h3>
+<h3 align="center">❤️A Passionate FullStack Developer from India❤️<h3>
 
-- 🌱 I’m currently learning **Frontend, React.js etc**
+- 🌱 I’m a FullStack Developer
 
-- 💬 Ask me about **Frontend**
+- 💬 Ask me about **FullStack**
 
 - 📫 How to reach me **businessritiksinghdeos@gmail.com**
-
-- ⚡ Fun fact **I am more than funny 😅**
 
 <h3 align="left">Connect with me:😍</h3>
 <p align="left">
