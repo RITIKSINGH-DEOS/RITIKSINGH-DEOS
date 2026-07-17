@@ -117,6 +117,30 @@
         stroke="#30363d"
         stroke-width="1.5"/>
 
+            <!-- Connect Card -->
+    <rect
+        x="65"
+        y="655"
+        width="310"
+        height="250"
+        rx="10"
+        fill="#0b0f14"
+        stroke="#30363d"
+        stroke-width="1.5"/>
+
+    <!-- Connect Heading -->
+    <text
+        x="85"
+        y="695"
+        fill="#3fb950"
+        font-size="26"
+        font-weight="700"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        CONNECT WITH ME
+
+    </text>
+
     <!-- Placeholder Text -->
     <text
         x="220"
