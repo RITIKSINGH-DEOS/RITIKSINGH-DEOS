@@ -106,6 +106,30 @@
         stroke="#30363d"
         stroke-width="1.5"/>
 
+         <!-- Avatar Placeholder -->
+    <rect
+        x="65"
+        y="155"
+        width="310"
+        height="470"
+        rx="10"
+        fill="#0b0f14"
+        stroke="#30363d"
+        stroke-width="1.5"/>
+
+    <!-- Placeholder Text -->
+    <text
+        x="220"
+        y="400"
+        fill="#6e7681"
+        font-size="24"
+        text-anchor="middle"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        ASCII AVATAR
+
+    </text>
+
             <!-- Main Content -->
     <rect
         x="430"
