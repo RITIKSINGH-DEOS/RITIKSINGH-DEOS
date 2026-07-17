@@ -63,6 +63,18 @@ def build_svg():
         r="8"
         fill="#28c840"/>
 
+            <!-- Terminal Title -->
+    <text
+        x="130"
+        y="56"
+        fill="#8b949e"
+        font-size="22"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        ~/ritiksingh » cat README.md
+
+    </text>
+
 </svg>"""
 
 
