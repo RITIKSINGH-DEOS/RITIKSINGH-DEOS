@@ -218,8 +218,9 @@ def build_svg():
         width="8"
         height="30"
         fill="#3fb950"/>
+ <!-- Quick Stats -->
 
-            <!-- Quick Stats -->
+    <!-- Row 1 -->
     <text
         x="470"
         y="455"
@@ -232,7 +233,7 @@ def build_svg():
     </text>
 
     <text
-        x="720"
+        x="760"
         y="455"
         fill="#f0f6fc"
         font-size="26"
@@ -242,9 +243,10 @@ def build_svg():
 
     </text>
 
+    <!-- Row 2 -->
     <text
-        x="1090"
-        y="455"
+        x="470"
+        y="500"
         fill="#f0f6fc"
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
@@ -254,7 +256,7 @@ def build_svg():
     </text>
 
     <text
-        x="470"
+        x="760"
         y="500"
         fill="#f0f6fc"
         font-size="26"
