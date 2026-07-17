@@ -106,4 +106,15 @@
         stroke="#30363d"
         stroke-width="1.5"/>
 
+            <!-- Main Content -->
+    <rect
+        x="430"
+        y="120"
+        width="1110"
+        height="980"
+        rx="12"
+        fill="#0d1117"
+        stroke="#30363d"
+        stroke-width="1.5"/>
+
 </svg>
