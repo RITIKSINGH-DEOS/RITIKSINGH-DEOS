@@ -175,6 +175,49 @@ def build_svg():
 
     </text>
 
+    <!-- Command Box -->
+    <rect
+        x="470"
+        y="330"
+        width="650"
+        height="70"
+        rx="10"
+        fill="#0d1117"
+        stroke="#58a6ff"
+        stroke-width="1.5"/>
+
+    <!-- Prompt -->
+    <text
+        x="495"
+        y="375"
+        fill="#3fb950"
+        font-size="28"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        $
+
+    </text>
+
+    <!-- Command -->
+    <text
+        x="525"
+        y="375"
+        fill="#f0f6fc"
+        font-size="26"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        Building scalable web apps and AI powered tools
+
+    </text>
+
+    <!-- Cursor -->
+    <rect
+        x="1075"
+        y="350"
+        width="8"
+        height="30"
+        fill="#3fb950"/>
+
 </svg>"""
 
 
