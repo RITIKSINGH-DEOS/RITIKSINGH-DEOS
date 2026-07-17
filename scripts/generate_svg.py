@@ -210,6 +210,7 @@ def build_svg():
 
     </text>
 
+
     <!-- Cursor -->
     <rect
         x="1075"
@@ -217,6 +218,51 @@ def build_svg():
         width="8"
         height="30"
         fill="#3fb950"/>
+
+            <!-- Quick Stats -->
+    <text
+        x="470"
+        y="455"
+        fill="#f0f6fc"
+        font-size="26"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        🚀 50+ Projects
+
+    </text>
+
+    <text
+        x="720"
+        y="455"
+        fill="#f0f6fc"
+        font-size="26"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        ⭐ 230+ Contributions
+
+    </text>
+
+    <text
+        x="1090"
+        y="455"
+        fill="#f0f6fc"
+        font-size="26"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        🏆 10+ Achievements
+
+    </text>
+
+    <text
+        x="470"
+        y="500"
+        fill="#f0f6fc"
+        font-size="26"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        👥 100+ Followers
+
+    </text>
 
 </svg>"""
 
