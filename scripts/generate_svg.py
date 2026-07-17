@@ -289,6 +289,54 @@ def build_svg():
         stroke-width="1"
         opacity="0.4"/>
 
+            <!-- Focus Item 1 -->
+    <text
+        x="470"
+        y="620"
+        fill="#c9d1d9"
+        font-size="24"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        🤖 Building AI Apps
+
+    </text>
+
+    <!-- Focus Item 2 -->
+    <text
+        x="470"
+        y="665"
+        fill="#c9d1d9"
+        font-size="24"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        💻 Creating full stack products that solve real problems
+
+    </text>
+
+    <!-- Focus Item 3 -->
+    <text
+        x="470"
+        y="710"
+        fill="#c9d1d9"
+        font-size="24"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        📚 Learning Agentic AI &amp; Advanced System Design
+
+    </text>
+
+    <!-- Focus Item 4 -->
+    <text
+        x="470"
+        y="755"
+        fill="#c9d1d9"
+        font-size="24"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        🌍 Contributing to Open Source
+
+    </text>
+
 </svg>"""
 
 
