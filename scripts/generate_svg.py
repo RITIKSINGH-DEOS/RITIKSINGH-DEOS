@@ -75,6 +75,25 @@ def build_svg():
 
     </text>
 
+     <!-- Last Updated -->
+    <text
+        x="1245"
+        y="56"
+        fill="#c9d1d9"
+        font-size="20"
+        font-family="JetBrains Mono, Consolas, monospace">
+
+        Last updated: Jul 18, 2026
+
+    </text>
+
+    <!-- Online Dot -->
+    <circle
+        cx="1555"
+        cy="49"
+        r="7"
+        fill="#3fb950"/>
+
 </svg>"""
 
 
