@@ -44,6 +44,25 @@ def build_svg():
         stroke="#30363d"
         stroke-width="2"/>
 
+          <!-- Window Buttons -->
+    <circle
+        cx="45"
+        cy="50"
+        r="8"
+        fill="#ff5f57"/>
+
+    <circle
+        cx="70"
+        cy="50"
+        r="8"
+        fill="#febc2e"/>
+
+    <circle
+        cx="95"
+        cy="50"
+        r="8"
+        fill="#28c840"/>
+
 </svg>"""
 
 
