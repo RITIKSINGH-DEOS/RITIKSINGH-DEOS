@@ -104,6 +104,17 @@ def build_svg():
         stroke-width="1"
         opacity="0.35"/>
 
+          <!-- Left Panel -->
+    <rect
+        x="40"
+        y="120"
+        width="360"
+        height="980"
+        rx="12"
+        fill="#0d1117"
+        stroke="#30363d"
+        stroke-width="1.5"/>
+
 </svg>"""
 
 
