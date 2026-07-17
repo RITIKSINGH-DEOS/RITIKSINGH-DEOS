@@ -131,7 +131,7 @@ def build_svg():
         x="65"
         y="655"
         width="310"
-        height="250"
+        height="420"
         rx="10"
         fill="#0b0f14"
         stroke="#30363d"
@@ -149,6 +149,98 @@ def build_svg():
         CONNECT WITH ME
 
     </text>
+
+    <!-- LinkedIn -->
+<text
+    x="85"
+    y="745"
+    fill="#c9d1d9"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    💼 LinkedIn
+
+</text>
+
+<text
+    x="110"
+    y="780"
+    fill="#58a6ff"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+   linkedin.com/in/ritik
+
+   </text>
+
+   <!-- Portfolio -->
+<text
+    x="85"
+    y="835"
+    fill="#c9d1d9"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    🌐 Portfolio
+
+</text>
+
+<text
+    x="110"
+    y="870"
+    fill="#58a6ff"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    ritiksingh.dev
+
+</text>
+
+<!-- Email -->
+<text
+    x="85"
+    y="925"
+    fill="#c9d1d9"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    📧 Email
+
+</text>
+
+<text
+    x="110"
+    y="960"
+    fill="#58a6ff"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    business@gmail.com
+
+</text>
+
+<!-- GitHub -->
+<text
+    x="85"
+    y="1015"
+    fill="#c9d1d9"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    💻 GitHub
+
+</text>
+
+<text
+    x="110"
+    y="1050"
+    fill="#58a6ff"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    github.com/ritiksingh
+
+</text>
 
     <!-- Placeholder Text -->
     <text
