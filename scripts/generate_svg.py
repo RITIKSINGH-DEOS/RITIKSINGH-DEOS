@@ -93,6 +93,16 @@ def build_svg():
         cy="49"
         r="7"
         fill="#3fb950"/>
+        <!-- Header Accent Line -->
+        
+    <line
+        x1="40"
+        y1="95"
+        x2="1560"
+        y2="95"
+        stroke="#58a6ff"
+        stroke-width="1"
+        opacity="0.35"/>
 
 </svg>"""
 
