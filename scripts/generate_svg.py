@@ -470,7 +470,7 @@ PROFILE LOADING...
     </text>
 
     <text
-        x="760"
+        x="705"
         y="245"
         fill="#3fb950"
         font-size="72"
@@ -497,7 +497,7 @@ PROFILE LOADING...
     <rect
         x="470"
         y="330"
-        width="675"
+        width="670"
         height="70"
         rx="10"
         fill="#0d1117"
@@ -524,8 +524,7 @@ PROFILE LOADING...
     font-size="26"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    <tspan id="command-text">Building Ai-Powered Scalable Web Apps...</tspan>
-    <tspan class="cursor" fill="#3fb950">█</tspan>
+    <tspan id="command-text">Building AI-Powered Scalable Web Apps...</tspan><tspan class="cursor" fill="#3fb950">█</tspan>
 
 </text>
 
@@ -609,7 +608,7 @@ PROFILE LOADING...
         font-size="24"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        🤖 Building AI Apps
+        🤖 Building Full Stack AI Apps that solve real problems
 
     </text>
 
@@ -621,7 +620,7 @@ PROFILE LOADING...
         font-size="24"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        💻 Creating full stack products that solve real problems
+       🧠 Experimenting with LLMs, RAG and AI Agents
 
     </text>
 
@@ -648,6 +647,7 @@ PROFILE LOADING...
         🌍 Contributing to Open Source
 
     </text>
+
 
     <!-- Tech Stack Heading -->
 <text
