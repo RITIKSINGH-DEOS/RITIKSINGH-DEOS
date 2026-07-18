@@ -287,13 +287,13 @@ def build_svg():
 </text>
 
 <text
-    x="110"
+    x="80"
     y="780"
     fill="#58a6ff"
-    font-size="18"
+    font-size="17"
     font-family="JetBrains Mono, Consolas, monospace">
 
-   linkedin.com/in/ritik
+    linkedin.com/in/ritiksinghdeos
 
    </text>
 
@@ -310,7 +310,7 @@ def build_svg():
 </text>
 
 <text
-    x="110"
+    x="80"
     y="870"
     fill="#58a6ff"
     font-size="18"
@@ -333,13 +333,13 @@ def build_svg():
 </text>
 
 <text
-    x="110"
+    x="80"
     y="960"
     fill="#58a6ff"
-    font-size="18"
+    font-size="16"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    business@gmail.com
+    businessritiksinghdeos@gmail.com
 
 </text>
 
@@ -356,13 +356,13 @@ def build_svg():
 </text>
 
 <text
-    x="110"
+    x="80"
     y="1050"
     fill="#58a6ff"
-    font-size="18"
+    font-size="17"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    github.com/ritiksingh
+    github.com/RITIKSINGH-DEOS
 
 </text>
 <!-- Avatar Frame -->
