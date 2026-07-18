@@ -413,7 +413,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        🚀 50+ Projects
+       🚀 63 Public Repo
 
     </text>
 
@@ -424,7 +424,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        ⭐ 230+ Contributions
+        ⭐ 1 Stars
 
     </text>
 
@@ -447,7 +447,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        👥 100+ Followers
+        👥 0 Followers
 
     </text>
 
@@ -521,5 +521,248 @@ PROFILE LOADING...
         🌍 Contributing to Open Source
 
     </text>
+
+    <!-- Tech Stack Heading -->
+<text
+    x="470"
+    y="845"
+    fill="#3fb950"
+    font-size="28"
+    font-weight="700"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    TECH STACK
+
+</text>
+
+<!-- Heading Line -->
+<line
+    x1="660"
+    y1="835"
+    x2="1120"
+    y2="835"
+    stroke="#3fb950"
+    stroke-width="1"
+    opacity="0.4"/>
+
+    <!-- Python -->
+<rect
+    x="470"
+    y="875"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="537"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🐍 Python
+
+</text>
+
+<!-- JavaScript -->
+<rect
+    x="625"
+    y="875"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="715"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🟨 JavaScript
+
+</text>
+
+<!-- React -->
+<rect
+    x="825"
+    y="875"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="892"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+⚛️ React
+
+</text>
+
+<!-- Node.js -->
+<rect
+    x="470"
+    y="935"
+    width="150"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="545"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🟢 Node.js
+
+</text>
+
+<!-- Express -->
+<rect
+    x="640"
+    y="935"
+    width="150"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="715"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🚂 Express
+
+</text>
+
+<!-- MongoDB -->
+<rect
+    x="810"
+    y="935"
+    width="170"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="895"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🍃 MongoDB
+
+</text>
+
+<!-- Java -->
+<rect
+    x="470"
+    y="995"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="537"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+☕ Java
+
+</text>
+
+<!-- Git -->
+<rect
+    x="625"
+    y="995"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="692"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🌿 Git
+
+</text>
+
+<!-- agents -->
+<rect
+    x="780"
+    y="995"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="870"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🤖 AI Agents
+
+</text>
+
+<!-- Docker -->
+<rect
+    x="980"
+    y="995"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="1055"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🐳 Docker
+
+</text>
 
 </svg>

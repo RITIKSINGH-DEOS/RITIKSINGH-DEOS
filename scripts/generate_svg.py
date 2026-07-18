@@ -1,9 +1,15 @@
 from pathlib import Path
+import requests
+from dotenv import load_dotenv
+import os
 
 ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT / ".env")
 
 OUTPUT_DIR = ROOT / "generated"
 OUTPUT_FILE = OUTPUT_DIR / "dashboard.svg"
+GITHUB_USERNAME = "ritiksingh-deos"
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 def generate_matrix_column(x, start_y, count):
     svg = ""
@@ -27,9 +33,84 @@ def generate_matrix_column(x, start_y, count):
 
     return svg
 
-    return svg  
+def fetch_contributions():
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+          }
+        }
+      }
+    }
+    """
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "query": query,
+        "variables": {
+            "login": GITHUB_USERNAME
+        }
+    }
+
+    response = requests.post(
+        "https://api.github.com/graphql",
+        headers=headers,
+        json=payload
+    )
+
+    if response.status_code != 200:
+        return 0
+
+    data = response.json()
+
+    if "errors" in data:
+        return 0
+
+    return data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+
+def fetch_github_stats():
+    url = f"https://api.github.com/users/{GITHUB_USERNAME}"
+
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        return {
+            "repos": 0,
+            "followers": 0,
+            "following": 0,
+            "stars": 0
+        }
+
+    repos_response = requests.get(
+        f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100"
+    )
+
+    total_stars = 0
+
+    if repos_response.status_code == 200:
+        repos = repos_response.json()
+        total_stars = sum(repo["stargazers_count"] for repo in repos)
+
+    data = response.json()
+
+    contributions = fetch_contributions()
+
+    return {
+        "repos": data["public_repos"],
+        "followers": data["followers"],
+        "following": data["following"],
+        "stars": total_stars,
+        "contributions": contributions
+    }
 
 def build_svg():
+    stats = fetch_github_stats()
+
     return f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="1600"
     height="1200"
@@ -445,7 +526,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        🚀 50+ Projects
+       🚀 {stats["repos"]} Public Repo
 
     </text>
 
@@ -456,7 +537,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        ⭐ 230+ Contributions
+        ⭐ {stats["stars"]} Stars
 
     </text>
 
@@ -479,7 +560,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        👥 100+ Followers
+        👥 {stats["followers"]} Followers
 
     </text>
 
@@ -554,12 +635,259 @@ PROFILE LOADING...
 
     </text>
 
+    <!-- Tech Stack Heading -->
+<text
+    x="470"
+    y="845"
+    fill="#3fb950"
+    font-size="28"
+    font-weight="700"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    TECH STACK
+
+</text>
+
+<!-- Heading Line -->
+<line
+    x1="660"
+    y1="835"
+    x2="1120"
+    y2="835"
+    stroke="#3fb950"
+    stroke-width="1"
+    opacity="0.4"/>
+
+    <!-- Python -->
+<rect
+    x="470"
+    y="875"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="537"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🐍 Python
+
+</text>
+
+<!-- JavaScript -->
+<rect
+    x="625"
+    y="875"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="715"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🟨 JavaScript
+
+</text>
+
+<!-- React -->
+<rect
+    x="825"
+    y="875"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="892"
+    y="902"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+⚛️ React
+
+</text>
+
+<!-- Node.js -->
+<rect
+    x="470"
+    y="935"
+    width="150"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="545"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🟢 Node.js
+
+</text>
+
+<!-- Express -->
+<rect
+    x="640"
+    y="935"
+    width="150"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="715"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🚂 Express
+
+</text>
+
+<!-- MongoDB -->
+<rect
+    x="810"
+    y="935"
+    width="170"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="895"
+    y="962"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🍃 MongoDB
+
+</text>
+
+<!-- Java -->
+<rect
+    x="470"
+    y="995"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="537"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+☕ Java
+
+</text>
+
+<!-- Git -->
+<rect
+    x="625"
+    y="995"
+    width="135"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="692"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🌿 Git
+
+</text>
+
+<!-- agents -->
+<rect
+    x="780"
+    y="995"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="870"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🤖 AI Agents
+
+</text>
+
+<!-- Docker -->
+<rect
+    x="980"
+    y="995"
+    width="180"
+    height="42"
+    rx="8"
+    fill="#161b22"
+    stroke="#30363d"/>
+
+<text
+    x="1055"
+    y="1022"
+    text-anchor="middle"
+    fill="#c9d1d9"
+    font-size="18"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+🐳 Docker
+
+</text>
+
 </svg>"""
 
 
 
 
 def main():
+    print(fetch_github_stats())
+    print("Token Loaded:", GITHUB_TOKEN is not None)
+    print("Contributions:", fetch_contributions())
+
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     svg = build_svg()
