@@ -115,8 +115,26 @@ def build_svg():
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="1600"
-    height="1200"
-    viewBox="0 0 1600 1200">
+    height="1410"
+    viewBox="0 0 1600 1410">
+
+    <style>
+@keyframes blink {{
+    0%, 49% {{
+        opacity: 1;
+    }}
+
+    50%, 100% {{
+        opacity: 0;
+    }}
+}}
+
+.cursor {{
+    animation: blink 0.8s steps(1) infinite;
+}}
+</style>
+
+
 
     <!-- Background -->
     <rect width="1600" height="1200" fill="#0d1117"/>
@@ -126,7 +144,7 @@ def build_svg():
         x="20"
         y="20"
         width="1560"
-        height="1160"
+        height="1370"
         rx="16"
         fill="#0b0f14"
         stroke="#30363d"
@@ -215,7 +233,7 @@ def build_svg():
         x="40"
         y="120"
         width="360"
-        height="980"
+        height="1230"
         rx="12"
         fill="#0d1117"
         stroke="#30363d"
@@ -420,7 +438,7 @@ PROFILE LOADING...
         x="430"
         y="120"
         width="1110"
-        height="980"
+        height="1230"
         rx="12"
         fill="#0d1117"
         stroke="#30363d"
@@ -466,12 +484,12 @@ PROFILE LOADING...
     <!-- Subtitle -->
     <text
         x="470"
-        y="295"
+        y="300"
         fill="#c9d1d9"
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        Full Stack Ai Engineer • AI/ML
+        open to Full Stack AI Engineer
 
     </text>
 
@@ -479,7 +497,7 @@ PROFILE LOADING...
     <rect
         x="470"
         y="330"
-        width="650"
+        width="675"
         height="70"
         rx="10"
         fill="#0d1117"
@@ -500,24 +518,18 @@ PROFILE LOADING...
 
     <!-- Command -->
     <text
-        x="525"
-        y="375"
-        fill="#f0f6fc"
-        font-size="26"
-        font-family="JetBrains Mono, Consolas, monospace">
+    x="525"
+    y="375"
+    fill="#f0f6fc"
+    font-size="26"
+    font-family="JetBrains Mono, Consolas, monospace">
 
-        Building scalable web apps and AI powered tools
+    <tspan id="command-text">Building Ai-Powered Scalable Web Apps...</tspan>
+    <tspan class="cursor" fill="#3fb950">█</tspan>
 
-    </text>
+</text>
 
-
-    <!-- Cursor -->
-    <rect
-        x="1075"
-        y="350"
-        width="8"
-        height="30"
-        fill="#3fb950"/>
+    
  <!-- Quick Stats -->
 
     <!-- Row 1 -->
@@ -649,6 +661,7 @@ PROFILE LOADING...
     TECH STACK
 
 </text>
+
 
 <!-- Heading Line -->
 <line
@@ -879,6 +892,122 @@ PROFILE LOADING...
 🐳 Docker
 
 </text>
+
+<!-- Projects Heading -->
+<text
+    x="470"
+    y="1090"
+    fill="#3fb950"
+    font-size="28"
+    font-weight="700"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    PROJECTS
+
+</text>
+
+<!-- Projects Heading Line -->
+<line
+    x1="660"
+    y1="1080"
+    x2="1120"
+    y2="1080"
+    stroke="#3fb950"
+    stroke-width="1"
+    opacity="0.4"/>
+
+<a
+    href="https://github.com/ritiksingh-deos/AI-Learning-Assistant"
+    target="_blank">
+
+<text
+    x="470"
+    y="1138"
+    fill="#3fb950"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    📁 AI Learning Assistant
+
+</text>
+
+</a>
+
+<line
+    x1="470"
+    y1="1158"
+    x2="1120"
+    y2="1158"
+    stroke="#30363d"
+    stroke-width="1"/>
+
+    <!-- Finance Tracker -->
+<text
+    x="470"
+    y="1205"
+    fill="#3fb950"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    📁 Finance Tracker
+
+</text>
+
+<line
+    x1="470"
+    y1="1225"
+    x2="1120"
+    y2="1225"
+    stroke="#30363d"
+    stroke-width="1"/>
+
+    <!-- AI Chatbot -->
+<text
+    x="470"
+    y="1272"
+    fill="#3fb950"
+    font-size="22"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    📁 AI Chatbot
+
+    </text>
+
+    <line
+    x1="470"
+    y1="1292"
+    x2="1120"
+    y2="1292"
+    stroke="#30363d"
+    stroke-width="1"/>
+
+    <!-- Terminal Prompt -->
+<text
+    x="470"
+    y="1335"
+    fill="#FFFFFF"
+    font-size="24"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    ritiksingh@dev:~$
+
+</text>
+
+<!-- Cursor -->
+<rect
+    x="700"
+    y="1310"
+    width="10"
+    height="28"
+    fill="#3fb950">
+
+    <animate
+        attributeName="opacity"
+        values="1;0;1"
+        dur="0.7s"
+        repeatCount="indefinite"/>
+
+</rect>
 
 </svg>"""
 
