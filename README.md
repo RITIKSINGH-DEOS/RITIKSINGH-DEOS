@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="generated/dashboard.svg" alt="GitHub Dashboard" width="100%">
+</p>
+
+
 ![logo](https://github.com/RITIKSINGH-DEOS/RITIKSINGH-DEOS/blob/main/RITIK%20SINGH%20LINKIED%20IN.png)
 
 <h1 align="center">Hi 👋, I'm RITIK SINGH</h1>
