@@ -5,9 +5,32 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT / "generated"
 OUTPUT_FILE = OUTPUT_DIR / "dashboard.svg"
 
+def generate_matrix_column(x, start_y, count):
+    svg = ""
+
+    for i in range(count):
+        y = start_y + (i * 20)
+
+        svg += f"""
+<text
+    x="{x}"
+    y="{y}"
+    fill="#3fb950"
+    opacity="0.18"
+    font-size="14"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+    101101
+
+</text>
+"""
+
+    return svg
+
+    return svg  
 
 def build_svg():
-    return """<svg xmlns="http://www.w3.org/2000/svg"
+    return f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="1600"
     height="1200"
     viewBox="0 0 1600 1200">
@@ -241,20 +264,74 @@ def build_svg():
     github.com/ritiksingh
 
 </text>
+<!-- Avatar Frame -->
+<rect
+    x="95"
+    y="185"
+    width="250"
+    height="390"
+    rx="8"
+    fill="#0d1117"
+    stroke="#30363d"
+    stroke-width="1"/>
 
-    <!-- Placeholder Text -->
-    <text
-        x="220"
-        y="400"
-        fill="#6e7681"
-        font-size="24"
-        text-anchor="middle"
-        font-family="JetBrains Mono, Consolas, monospace">
+    <!-- Matrix Background -->
+<rect
+    x="105"
+    y="195"
+    width="230"
+    height="370"
+    rx="6"
+    fill="#070b10"/>
 
-        ASCII AVATAR
 
-    </text>
 
+<!-- Placeholder Circle -->
+<circle
+    cx="220"
+    cy="315"
+    r="72"
+    fill="none"
+    stroke="#3fb950"
+    stroke-width="2"
+    opacity="0.7"/>
+
+<!-- Head -->
+<circle
+    cx="220"
+    cy="300"
+    r="26"
+    fill="#3fb950"
+    opacity="0.15"/>
+
+<!-- Body -->
+<path
+    d="M185 370 Q220 335 255 370"
+    fill="none"
+    stroke="#3fb950"
+    stroke-width="3"
+    opacity="0.25"/>
+
+<!-- Scan Lines -->
+<line x1="145" y1="245" x2="295" y2="245" stroke="#3fb950" opacity="0.12"/>
+<line x1="145" y1="275" x2="295" y2="275" stroke="#3fb950" opacity="0.12"/>
+<line x1="145" y1="305" x2="295" y2="305" stroke="#3fb950" opacity="0.12"/>
+<line x1="145" y1="335" x2="295" y2="335" stroke="#3fb950" opacity="0.12"/>
+<line x1="145" y1="365" x2="295" y2="365" stroke="#3fb950" opacity="0.12"/>
+
+<!-- Label -->
+<text
+    x="220"
+    y="500"
+    text-anchor="middle"
+    fill="#3fb950"
+    font-size="16"
+    opacity="0.6"
+    font-family="JetBrains Mono, Consolas, monospace">
+
+PROFILE LOADING...
+
+</text>
             <!-- Main Content -->
     <rect
         x="430"
