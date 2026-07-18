@@ -489,7 +489,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        open to Full Stack AI Engineer
+        open to Full Stack AI Engineer roles
 
     </text>
 
