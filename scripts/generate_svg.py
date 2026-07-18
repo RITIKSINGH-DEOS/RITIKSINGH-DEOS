@@ -2,6 +2,7 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 import os
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
@@ -110,6 +111,7 @@ def fetch_github_stats():
 
 def build_svg():
     stats = fetch_github_stats()
+    current_date = datetime.now().strftime("%b %d, %Y")
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="1600"
@@ -187,7 +189,7 @@ def build_svg():
         font-size="20"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        Last updated: Jul 18, 2026
+        Last updated: {current_date}
 
     </text>
 
@@ -526,7 +528,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-       🚀 {stats["repos"]} Public Repo
+       🚀 {stats["repos"]} Public Repos
 
     </text>
 
@@ -549,7 +551,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        🏆 10+ Achievements
+        🔥 {stats["contributions"]} Contributions
 
     </text>
 
@@ -884,9 +886,6 @@ PROFILE LOADING...
 
 
 def main():
-    print(fetch_github_stats())
-    print("Token Loaded:", GITHUB_TOKEN is not None)
-    print("Contributions:", fetch_contributions())
 
     OUTPUT_DIR.mkdir(exist_ok=True)
 
