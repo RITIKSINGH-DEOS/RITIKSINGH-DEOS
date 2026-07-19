@@ -2,7 +2,7 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
@@ -111,7 +111,8 @@ def fetch_github_stats():
 
 def build_svg():
     stats = fetch_github_stats()
-    current_date = datetime.now().strftime("%b %d, %Y")
+    ist = datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)
+    current_date = ist.strftime("%b %d, %Y")
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="1600"
