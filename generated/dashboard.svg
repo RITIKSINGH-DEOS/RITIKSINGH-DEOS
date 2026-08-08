@@ -92,7 +92,7 @@
         font-size="20"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        Last updated: Jul 19, 2026
+        Last updated: Aug 08, 2026
 
     </text>
 
@@ -424,7 +424,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-       🚀 63 Public Repos
+       🚀 67 Public Repos
 
     </text>
 
@@ -435,7 +435,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        ⭐ 1 Stars
+        ⭐ 0 Stars
 
     </text>
 
@@ -447,7 +447,7 @@ PROFILE LOADING...
         font-size="26"
         font-family="JetBrains Mono, Consolas, monospace">
 
-        🔥 97 Contributions
+        🔥 120 Contributions
 
     </text>
 
@@ -812,7 +812,7 @@ PROFILE LOADING...
     font-size="22"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    📁 AI Learning Assistant
+    📁 Resume AI
 
 </text>
 
@@ -826,7 +826,7 @@ PROFILE LOADING...
     stroke="#30363d"
     stroke-width="1"/>
 
-    <!-- Finance Tracker -->
+    <!-- Health Tracker -->
 <text
     x="470"
     y="1205"
@@ -834,7 +834,7 @@ PROFILE LOADING...
     font-size="22"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    📁 Finance Tracker
+    📁 MedConnect
 
 </text>
 

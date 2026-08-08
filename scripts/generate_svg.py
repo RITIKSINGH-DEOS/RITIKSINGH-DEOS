@@ -928,7 +928,7 @@ PROFILE LOADING...
     font-size="22"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    📁 AI Learning Assistant
+    📁 Resume AI
 
 </text>
 
@@ -942,7 +942,7 @@ PROFILE LOADING...
     stroke="#30363d"
     stroke-width="1"/>
 
-    <!-- Finance Tracker -->
+    <!-- Health Tracker -->
 <text
     x="470"
     y="1205"
@@ -950,7 +950,7 @@ PROFILE LOADING...
     font-size="22"
     font-family="JetBrains Mono, Consolas, monospace">
 
-    📁 Finance Tracker
+    📁 MedConnect
 
 </text>
 
