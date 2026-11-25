@@ -1,8 +1,12 @@
+import sys
 from pathlib import Path
 import requests
 from dotenv import load_dotenv
 import os
 from datetime import datetime, timezone, timedelta
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
@@ -35,6 +39,9 @@ def generate_matrix_column(x, start_y, count):
     return svg
 
 def fetch_contributions():
+    if not GITHUB_TOKEN:
+        return 0
+
     query = """
     query($login: String!) {
       user(login: $login) {
@@ -58,56 +65,77 @@ def fetch_contributions():
         }
     }
 
-    response = requests.post(
-        "https://api.github.com/graphql",
-        headers=headers,
-        json=payload
-    )
+    try:
+        response = requests.post(
+            "https://api.github.com/graphql",
+            headers=headers,
+            json=payload,
+            timeout=10
+        )
 
-    if response.status_code != 200:
+        if response.status_code != 200:
+            return 0
+
+        data = response.json()
+
+        if "errors" in data or "data" not in data or not data.get("data") or not data["data"].get("user"):
+            return 0
+
+        return data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+    except Exception as e:
+        print(f"Warning: Could not fetch contributions: {e}")
         return 0
-
-    data = response.json()
-
-    if "errors" in data:
-        return 0
-
-    return data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
 
 def fetch_github_stats():
-    url = f"https://api.github.com/users/{GITHUB_USERNAME}"
-
-    response = requests.get(url)
-
-    if response.status_code != 200:
-        return {
-            "repos": 0,
-            "followers": 0,
-            "following": 0,
-            "stars": 0
-        }
-
-    repos_response = requests.get(
-        f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100"
-    )
-
-    total_stars = 0
-
-    if repos_response.status_code == 200:
-        repos = repos_response.json()
-        total_stars = sum(repo["stargazers_count"] for repo in repos)
-
-    data = response.json()
-
-    contributions = fetch_contributions()
-
-    return {
-        "repos": data["public_repos"],
-        "followers": data["followers"],
-        "following": data["following"],
-        "stars": total_stars,
-        "contributions": contributions
+    fallback = {
+        "repos": 0,
+        "followers": 0,
+        "following": 0,
+        "stars": 0,
+        "contributions": 0
     }
+
+    headers = {
+        "Accept": "application/vnd.github.v3+json"
+    }
+    if GITHUB_TOKEN:
+        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+
+    try:
+        contributions = fetch_contributions()
+        fallback["contributions"] = contributions
+
+        url = f"https://api.github.com/users/{GITHUB_USERNAME}"
+        response = requests.get(url, headers=headers, timeout=10)
+
+        if response.status_code != 200:
+            print(f"Warning: GitHub API returned status {response.status_code} for user profile.")
+            return fallback
+
+        data = response.json()
+
+        repos_response = requests.get(
+            f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100",
+            headers=headers,
+            timeout=10
+        )
+
+        total_stars = 0
+        if repos_response.status_code == 200:
+            repos = repos_response.json()
+            if isinstance(repos, list):
+                total_stars = sum(repo.get("stargazers_count", 0) for repo in repos if isinstance(repo, dict))
+
+        return {
+            "repos": data.get("public_repos", 0),
+            "followers": data.get("followers", 0),
+            "following": data.get("following", 0),
+            "stars": total_stars,
+            "contributions": contributions
+        }
+    except Exception as e:
+        print(f"Error in fetch_github_stats: {e}")
+        return fallback
 
 def build_svg():
     stats = fetch_github_stats()
